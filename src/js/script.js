@@ -2,7 +2,7 @@ $("document").ready(function () {
 
     $("#loadingDiv").hide();
     $("#mainContent").show();
-    
+
     $("#totalExp").text('Experience :' + computeExp(07, 10, 2014));
 
     renderFrameworkCharts();
@@ -117,14 +117,14 @@ $("document").ready(function () {
 
 
     function renderFrameworkCharts() {
-        createPieChart('framework1', 60, 'assets/img/spring.png', '6DB33F');
-        createPieChart('framework2', 80, 'assets/img/hibernate.png', 'BCAE79');
-        createPieChart('framework3', 55, 'assets/img/mongodb.png', '529848');
-        createPieChart('framework4', 80, 'assets/img/bootstrap.png', '18093A');
-        createPieChart('framework5', 40, 'assets/img/angularjs.png', 'B82934');
-        createPieChart('framework6', 40, 'assets/img/reactjs.png', '00D8FF');
-        createPieChart('framework7', 30, 'assets/img/firebase.png', 'FED95A');
-        createPieChart('framework8', 70, 'assets/img/bluemix.png', '00AED1');
+        createPieChart('framework1', 60, '../src/assets/img/spring.png', '6DB33F');
+        createPieChart('framework2', 80, '../src/assets/img/hibernate.png', 'BCAE79');
+        createPieChart('framework3', 55, '../src/assets/img/mongodb.png', '529848');
+        createPieChart('framework4', 80, '../src/assets/img/bootstrap.png', '18093A');
+        createPieChart('framework5', 40, '../src/assets/img/angularjs.png', 'B82934');
+        createPieChart('framework6', 40, '../src/assets/img/reactjs.png', '00D8FF');
+        createPieChart('framework7', 30, '../src/assets/img/firebase.png', 'FED95A');
+        createPieChart('framework8', 70, '../src/assets/img/bluemix.png', '00AED1');
     }
 
 
@@ -285,7 +285,7 @@ function createTimeLine() {
                 shortContent: '<h5 class="visible-xs-block text-primary text-bold">2007</h5>' +
                     '<h5 class="text-bold text-primary">High School</h5>' +
                     '<div class="row">' +
-                    '<div class="col-md-2"><img src="assets/img/kv.png" width="75" /></div>' +
+                    '<div class="col-md-2"><img src="../src/assets/img/kv.png" width="75" /></div>' +
                     '<div class="col-md-10 col-xs-11">' +
                     '<span class="text-primary">Kendriya Vidhyalaya No. 3 , Bhopal</span>' +
                     '<br/>' +
@@ -302,7 +302,7 @@ function createTimeLine() {
                 shortContent: '<h5 class="visible-xs-block text-primary text-bold">2009</h5>' +
                     '<h5 class="text-bold text-primary">Intermediate</h5>' +
                     '<div class="row">' +
-                    '<div class="col-md-2"><img src="assets/img/kv.png" width="75"/></div>' +
+                    '<div class="col-md-2"><img src="../src/assets/img/kv.png" width="75"/></div>' +
                     '<div class="col-md-10 col-xs-11">' +
                     '<span class="text-primary">Kendriya Vidhyalaya No. 3 , Bhopal</span>' +
                     '<br/>' +
@@ -317,7 +317,7 @@ function createTimeLine() {
                 shortContent: '<h5 class="visible-xs-block text-primary text-bold">2013</h5>' +
                     '<h5 class="text-primary text-bold">Internship</h5>' +
                     '<div class="row">' +
-                    '<div class="col-md-2"><img src="assets/img/wipro_logo.png" width="70" /></div>' +
+                    '<div class="col-md-2"><img src="../src/assets/img/wipro_logo.png" width="70" /></div>' +
                     '<div class="col-md-10 col-xs-11">' +
                     '<span class="text-primary">Wipro Technologies</span>' +
                     '<br/>' +
@@ -332,7 +332,7 @@ function createTimeLine() {
                 shortContent: '<h5 class="visible-xs-block text-primary">2014</h5>' +
                     '<h5 class="text-primary text-bold">B.Tech Computer Science &amp; Engineering</h5>' +
                     '<div class="row">' +
-                    '<div class="col-md-2"><img src="assets/img/jk.png" width="70" /></div>' +
+                    '<div class="col-md-2"><img src="../src/assets/img/jk.png" width="70" /></div>' +
                     '<div class="col-md-10 col-xs-11">' +
                     '<span class="text-primary">J.K. Institute of Applied Physics &amp; Technology</span>' +
                     '<br/>' +
@@ -349,7 +349,7 @@ function createTimeLine() {
                 shortContent: '<h5 class="visible-xs-block text-primary text-bold">2014</h5>' +
                     '<h5 class="text-primary text-bold">Infogain India Pvt. Ltd.</h5>' +
                     '<div class="row">' +
-                    '<div class="col-md-2"><img src="assets/img/infogain_logo.png" width="70" /></div>' +
+                    '<div class="col-md-2"><img src="../src/assets/img/infogain_logo.png" width="70" /></div>' +
                     '<div class="col-md-10 col-xs-11">' +
                     '<span class="text-primary">Software Engineer</span>' +
                     '<br/>' +
@@ -364,7 +364,7 @@ function createTimeLine() {
                 shortContent: '<h5 class="visible-xs-block text-primary text-bold">2016</h5>' +
                     '<h5 class="text-primary text-bold">Wipro Digital</h5>' +
                     '<div class="row">' +
-                    '<div class="col-md-2"><img src="assets/img/wd_logo.png" width="70" /></div>' +
+                    '<div class="col-md-2"><img src="../src/assets/img/wd_logo.png" width="70" /></div>' +
                     '<div class="col-md-10 col-xs-11">' +
                     '<span class="text-primary">Technologist</span>' +
                     '<br/>' +
