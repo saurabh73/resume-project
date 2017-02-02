@@ -1,0 +1,33 @@
+{
+  "name": "resume-project",
+  "version": "1.0.0",
+  "description": "Resume project for Saurabh Dutta",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurabh73/resume-project.git"
+  },
+  "keywords": [
+    "resume",
+    "saurabh dutta",
+    "saurabh73"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saurabh73/resume-project/issues"
+  },
+  "homepage": "https://github.com/saurabh73/resume-project#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "chartist": "^0.10.1",
+    "chartist-plugin-fill-donut": "^0.1.4",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "jquery-timelineme": "^0.1.7",
+    "waypoints": "^4.0.1"
+  }
+}
