@@ -15,7 +15,7 @@
     "saurabh dutta",
     "saurabh73"
   ],
-  "author": "",
+  "author": "Saurabh Dutta <saurabhdutta.jk@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/saurabh73/resume-project/issues"
@@ -29,5 +29,12 @@
     "jquery": "^3.1.1",
     "jquery-timelineme": "^0.1.7",
     "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8"
   }
 }
