@@ -1,29 +1,37 @@
-var gulp  = require('gulp');
-var gutil = require('gulp-util');
-var inject = require('gulp-inject');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var gulp = require('gulp');
+var htmlreplace = require('gulp-html-replace');
+var bundle = require('gulp-bundle-assets');
+var gulpCopy = require('gulp-copy');
 
-
-//gulp.task('index', function () {
-//  var target = gulp.src('./src/index.html');
-//  // It's not necessary to read the files (will speed up things), we're only after their paths: 
-//  var sources = gulp.src(['./src/js/*.js', './src/css/*.css'], {read: false});
-// 
-//  return target.pipe(inject(sources))
-//    .pipe(gulp.dest('./src'));
-//});
-
-var appStream = gulp.src(['./src/js/*.js'])
-                  .pipe(concat('script.min.js'))
-                  .pipe(uglify())
-                  .pipe(gulp.dest('./dist'));
-
-
-
-gulp.task('default', function(){
-    return gulp.src('./src/index.html')
-        .pipe(inject(appStream))
-        .pipe(gulp.dest('./dist'));
+gulp.task('inject-dependencies', function(){
+  return gulp.src('src/index.html')
+    .pipe(htmlreplace({
+        'css': ['vendor/css/vendor.css','main/css/style.css'],
+        'js': ['vendor/js/vendor.js','main/js/script.js']
+    }))
+    .pipe(gulp.dest('dist/'));
 });
+
+gulp.task('bundle', function() {
+  return gulp.src('./bundle.config.js')
+    .pipe(bundle())
+    .pipe(bundle.results('./')) 
+    .pipe(gulp.dest('./dist'));
+});
+
+
+gulp.task('bootstrap-font-copy',function(){
+    return gulp.src('./node_modules/bootstrap/dist/fonts/*.*')
+        .pipe(gulpCopy('./dist/vendor',{prefix:3}))
+});
+
+gulp.task('fontawesome-font-copy',function(){
+    return gulp.src('./node_modules/font-awesome/fonts/*.*')
+        .pipe(gulpCopy('./dist/vendor',{prefix:2}))
+});
+
+gulp.task('font-copy',['bootstrap-font-copy','fontawesome-font-copy']);
+
+gulp.task('default',['bundle','inject-dependencies','font-copy']);
+
 
